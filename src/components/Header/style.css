@@ -1,20 +1,23 @@
 .header__container {
     background-color: #f8f9fa;
-    padding: 32px 0 36px 0;
+    padding: 23px 0 25px;
     box-shadow: 0px 4px 32px -12px rgba(0, 0, 0, 0.25);
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
-
+.header__div > img {
+    height: 18px;
+}
 .header__div {
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 85%;
     max-width: 1000px;
     margin: 0 auto;
     align-items: center;
 }
 
 .header__div > button {
+    font-family: "Nunito", sans-serif;
     background-color: #e9ecef;
     color: #343a40;
     font-weight: 600;
@@ -27,7 +30,8 @@
 }
 
 .header__div > button:hover {
-    background-color: #d12e6a;
+    background-color: #fd377e;
     color: #fff;
-    transform: scale(1.1);
+    transform: scale(1.03);
+    transition: 0.4s;
 }
