@@ -1,0 +1,16 @@
+.main__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 85%;
+    max-width: 1000px;
+    gap: 35px;
+}
+
+.main__section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 40%;
+    max-width: 363px;
+}

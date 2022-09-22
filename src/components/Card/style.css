@@ -1,0 +1,49 @@
+.list__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.card__description {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 50%;
+}
+.card__description > h3 {
+    color: #212529;
+    font-weight: 700;
+    font-size: 16px;
+}
+.card__description > span {
+    color: #343a40;
+    font-size: 12px;
+}
+.card__value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 0.4;
+}
+
+.card__value > p {
+    color: #212529;
+    font-size: 12px;
+}
+
+.card__value > button {
+    border: none;
+    background: #e9ecef;
+    border-radius: 2.4px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.card__value > button:hover {
+    background-color: #fd377e;
+    transition: 0.4s;
+}

@@ -1,0 +1,29 @@
+.amount__container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 20px 24px 18px;
+}
+
+.amount__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amount__info > h3 {
+    color: #212529;
+    font-weight: 700;
+}
+
+.amount__info > span {
+    color: #fd377e;
+    font-weight: 700;
+}
+
+.amount__container > p {
+    color: #343a40;
+    font-size: 13px;
+}
