@@ -1,9 +1,23 @@
 import { Card } from "../Card";
 import "./style.css";
 
-export function List({ listTransactions }) {
+export function List({ listTransactions, setListTransactions }) {
     const rendering = listTransactions.map((transaction, i) => {
-        return <Card transaction={transaction} key={i} />;
+        transaction.id = i;
+        return (
+            <Card
+                style={
+                    transaction.type == "Credit"
+                        ? { borderLeft: "6px solid #03B898" }
+                        : { borderLeft: "6px solid var(--color-grey-4)" }
+                }
+                listTransactions={listTransactions}
+                setListTransactions={setListTransactions}
+                id={i}
+                transaction={transaction}
+                key={i}
+            />
+        );
     });
 
     return (

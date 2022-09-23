@@ -1,27 +1,31 @@
 import { useState } from "react";
 import "./style.css";
-export function Form({ addTransaction }) {
+export function Form({ listTransactions, setListTransactions }) {
     const [descriptionInput, setDescriptionInput] = useState("");
-    const [amountInput, setAmountInput] = useState(0);
+    const [amountInput, setAmountInput] = useState("");
     const [typeSelect, setTypeSelect] = useState("");
-    const [transaction, setTransaction] = useState({});
 
     function handleSubmit() {
-        setTransaction({
-            description: descriptionInput,
-            type: typeSelect,
-            value: amountInput,
-        });
-
-        addTransaction(transaction);
+        setListTransactions([
+            ...listTransactions,
+            {
+                description: descriptionInput,
+                value: amountInput,
+                type: typeSelect,
+            },
+        ]);
     }
 
     return (
-        <form className="form__container">
+        <form
+            onSubmit={(event) => handleSubmit(event.preventDefault())}
+            className="form__container"
+        >
             <div className="info__container info__container--description">
                 <label htmlFor="description">Description</label>
                 <div>
                     <input
+                        required
                         id="description"
                         placeholder="Type your description"
                         type="text"
@@ -38,9 +42,10 @@ export function Form({ addTransaction }) {
                 <div>
                     <label htmlFor="amount">Amount</label>
                     <input
+                        required
                         id="amount"
                         placeholder="1"
-                        value={amountInput}
+                        value={+amountInput}
                         onChange={(event) => {
                             setAmountInput(event.target.value);
                         }}
@@ -49,30 +54,22 @@ export function Form({ addTransaction }) {
                 </div>
 
                 <div>
-                    <label htmlFor="type">Type of amount</label>
+                    <label htmlFor="type">Type</label>
                     <select
+                        required
                         value={typeSelect}
                         onChange={(event) => setTypeSelect(event.target.value)}
                         name=""
                         id="type"
                     >
                         <option value="">Select</option>
-                        <option value="credit">Credit</option>
-                        <option value="debit">Debit</option>
+                        <option value="Credit">Credit</option>
+                        <option value="Debit">Debit</option>
                     </select>
                 </div>
             </div>
 
-            <button
-                type="submit"
-                onClick={(event) => {
-                    console.log(descriptionInput, amountInput, typeSelect);
-                    event.preventDefault();
-                    handleSubmit();
-                }}
-            >
-                Submit amount
-            </button>
+            <button type="submit">Add transaction</button>
         </form>
     );
 }

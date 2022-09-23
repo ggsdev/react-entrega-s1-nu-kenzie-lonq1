@@ -3,7 +3,11 @@ import "./style.css";
 
 export function TotalMoney({ listTransactions }) {
     const total = listTransactions.reduce((acc, act) => {
-        return acc + act.value;
+        if (act.type === "Credit") {
+            return acc + +act.value;
+        } else {
+            return acc - +act.value;
+        }
     }, 0);
 
     return (

@@ -6,32 +6,23 @@ import { List } from "./components/List";
 import { TotalMoney } from "./components/TotalMoney";
 
 function App() {
-    const [listTransactions, setListTransactions] = useState([
-        { description: "Salário recebido", type: "entrada", value: 2500 },
-        { description: "Conta de luz", type: "saída", value: -150 },
-        { description: "Conta de luz", type: "saída", value: -150 },
-        { description: "Conta de luz", type: "saída", value: -150 },
-        { description: "Conta de luz", type: "saída", value: -150 },
-        { description: "Conta de luz", type: "saída", value: -150 },
-        { description: "Conta de luz", type: "saída", value: -150 },
-        { description: "Conta de luz", type: "saída", value: -150 },
-        { description: "Conta de luz", type: "saída", value: -150 },
-        { description: "Conta de luz", type: "saída", value: -150 },
-        { description: "Conta de luz", type: "saída", value: -150 },
-    ]);
+    const [listTransactions, setListTransactions] = useState([]);
 
-    function addTransaction(newTransaction) {
-        setListTransactions([...listTransactions, newTransaction]);
-    }
     return (
         <div className="App">
             <Header />
             <main className="main__container">
                 <section className="main__section">
-                    <Form addTransaction={addTransaction} />
+                    <Form
+                        listTransactions={listTransactions}
+                        setListTransactions={setListTransactions}
+                    />
                     <TotalMoney listTransactions={listTransactions} />
                 </section>
-                <List listTransactions={listTransactions} />
+                <List
+                    setListTransactions={setListTransactions}
+                    listTransactions={listTransactions}
+                />
             </main>
         </div>
     );
