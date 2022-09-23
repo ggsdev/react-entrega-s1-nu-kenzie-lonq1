@@ -3,7 +3,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 12px 20px;
-    background-color: #f8f9fa;
+    background-color: var(--color-grey-5);
+    box-shadow: 0.5px 0.5px 0.5px 0.5px var(--color-shadow);
     border-radius: 4px;
 }
 
@@ -14,12 +15,12 @@
     width: 50%;
 }
 .card__description > h3 {
-    color: #212529;
+    color: var(--color-grey-1);
     font-weight: 700;
     font-size: 16px;
 }
 .card__description > span {
-    color: #343a40;
+    color: var(--color-grey-2);
     font-size: 12px;
 }
 .card__value {
@@ -30,13 +31,13 @@
 }
 
 .card__value > p {
-    color: #212529;
+    color: var(--color-grey-1);
     font-size: 12px;
 }
 
 .card__value > button {
     border: none;
-    background: #e9ecef;
+    background: var(--color-grey-4);
     border-radius: 2.4px;
     width: 22px;
     height: 22px;
@@ -44,6 +45,6 @@
 }
 
 .card__value > button:hover {
-    background-color: #fd377e;
+    background-color: var(--color-primary-1);
     transition: 0.4s;
 }

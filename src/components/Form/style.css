@@ -1,14 +1,10 @@
-:root {
-    --color-primary: #fd377e;
-}
-
 .form__container {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-family-1);
     display: flex;
     flex-direction: column;
     gap: 16px;
     padding: 38px 24px;
-    border: 1px solid #e9ecef;
+    border: 1px solid var(--color-grey-4);
 }
 
 .info__container {
@@ -19,7 +15,7 @@
 }
 .info__container label {
     font-size: 12px;
-    color: #212529;
+    color: var(--color-grey-1);
     font-weight: 500;
 }
 .info__container > div {
@@ -30,34 +26,36 @@
 
 .info__container > div > span {
     font-size: 12px;
-    color: #868e96;
+    color: var(--color-grey-3);
 }
 
 .info__container--description input,
 .info__container--amount input,
 select {
     padding: 10px 16px;
-    border: 2px solid #f8f9fa;
-    background-color: #f8f9fa;
+    border: 1px solid var(--color-grey-4);
+    background-color: var(--color-grey-5);
     border-radius: 8px;
     outline-color: var(--color-primary);
 }
-
+.info__container input:focus {
+    outline: none;
+    border: 1px solid var(--color-primary-1);
+}
 .info__container--amount {
     position: static;
     flex-direction: row;
     justify-content: space-between;
 }
 .info__container--amount select {
-    border: 1px transparent solid;
     outline: none;
-    color: #343a40;
+    color: var(--color-grey-2);
 }
 .info__container--amount select:hover {
     cursor: pointer;
 }
 .info__container--amount select:focus {
-    border: 1px solid var(--color-primary);
+    border: 1px solid var(--color-primary-1);
 }
 .info__container--amount > div {
     width: 45%;
@@ -69,16 +67,16 @@ select {
     bottom: 34px;
     right: 7px;
     font-size: 16px;
-    color: #343a40;
+    color: var(--color-grey-2);
     font-weight: 500;
 }
 
 .form__container > button {
-    font-family: "Inter", sans-serif;
-    background: #fd377e;
+    font-family: var(--font-family-1);
+    background: var(--color-primary-1);
     border: none;
     padding: 13px 20px;
-    color: #ffffff;
+    color: var(--color-white-fixed);
     font-weight: 500;
     font-size: 16px;
     border-radius: 8px;
@@ -86,7 +84,7 @@ select {
 }
 
 .form__container > button:hover {
-    background: #d12e6a;
+    background: var(--color-primary-2);
     transform: scale(1.01);
     transition: 0.4s;
 }

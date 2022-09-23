@@ -2,8 +2,19 @@ import { useState } from "react";
 import "./style.css";
 export function Form({ addTransaction }) {
     const [descriptionInput, setDescriptionInput] = useState("");
-    const [amountInput, setAmountInput] = useState("");
+    const [amountInput, setAmountInput] = useState(0);
     const [typeSelect, setTypeSelect] = useState("");
+    const [transaction, setTransaction] = useState({});
+
+    function handleSubmit() {
+        setTransaction({
+            description: descriptionInput,
+            type: typeSelect,
+            value: amountInput,
+        });
+
+        addTransaction(transaction);
+    }
 
     return (
         <form className="form__container">
@@ -57,6 +68,7 @@ export function Form({ addTransaction }) {
                 onClick={(event) => {
                     console.log(descriptionInput, amountInput, typeSelect);
                     event.preventDefault();
+                    handleSubmit();
                 }}
             >
                 Submit amount
