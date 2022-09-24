@@ -34,7 +34,7 @@ export function Form({ listTransactions, setListTransactions }) {
                             setDescriptionInput(event.target.value)
                         }
                     />
-                    <span>Ex: Buy clothes</span>
+                    <span>E.g: Buy clothes</span>
                 </div>
             </div>
 

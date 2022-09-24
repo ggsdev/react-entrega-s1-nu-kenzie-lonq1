@@ -10,14 +10,16 @@ export function TotalMoney({ listTransactions }) {
         }
     }, 0);
 
-    return (
-        <div className="amount__container">
-            <div className="amount__info">
-                <h3>Total Amount: </h3>
-                <span>$ {total}</span>
-            </div>
+    if (listTransactions.length) {
+        return (
+            <div className="amount__container">
+                <div className="amount__info">
+                    <h3>Total Amount: </h3>
+                    <span>$ {total}</span>
+                </div>
 
-            <p>The amount refers to the balance</p>
-        </div>
-    );
+                <p>The amount refers to the balance</p>
+            </div>
+        );
+    }
 }

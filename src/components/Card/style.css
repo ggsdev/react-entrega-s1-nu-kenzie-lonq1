@@ -4,8 +4,11 @@
     align-items: center;
     padding: 12px 20px;
     background-color: var(--color-grey-5);
-    box-shadow: 0.5px 0.5px 0.5px 0.5px var(--color-shadow);
+    border: 0.5px solid var(--color-shadow);
     border-radius: 4px;
+    width: 85%;
+    max-width: 485px;
+    animation: translateCard 0.5s ease-in;
 }
 
 .card__description {
@@ -47,4 +50,16 @@
 .card__value > button:hover {
     background-color: var(--color-primary-1);
     transition: 0.4s;
+}
+
+@keyframes translateCard {
+    0% {
+        transform: translateY(-30%);
+        opacity: 0.1;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

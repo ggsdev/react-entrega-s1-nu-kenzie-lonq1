@@ -25,7 +25,8 @@ h3,
 ul,
 main,
 html,
-body {
+body,
+h1 {
     padding: 0;
     margin: 0;
     box-sizing: border-box;

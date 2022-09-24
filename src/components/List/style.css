@@ -8,6 +8,7 @@
     align-items: center;
     margin-bottom: 22px;
     gap: 12px;
+    flex-wrap: wrap;
 }
 .aside__header > h2 {
     font-size: 16px;
@@ -17,6 +18,7 @@
 .header__buttons {
     display: flex;
     gap: 12px;
+    flex-wrap: wrap;
 }
 .header__buttons > button {
     font-family: var(--font-family-2);
@@ -45,6 +47,16 @@
     max-height: 430px;
     overflow-y: auto;
     padding-right: 8px;
+}
+
+.main__list h2 {
+    margin-bottom: 25px;
+    color: var(--color-grey-2);
+    font-size: 22px;
+    font-weight: 700;
+}
+.main__list img {
+    max-width: 100%;
 }
 
 ::-webkit-scrollbar {
