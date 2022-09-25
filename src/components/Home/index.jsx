@@ -11,7 +11,7 @@ export function Home({ setIsLoggedIn }) {
                     <p>fast and safe</p>
                     <button onClick={() => setIsLoggedIn(true)}>Begin</button>
                 </div>
-                <img src={landingImage} alt="Landing Page Image" />
+                <img src={landingImage} alt="Landing Page" />
             </div>
         </div>
     );

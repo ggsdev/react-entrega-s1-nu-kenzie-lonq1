@@ -5,6 +5,7 @@
     gap: 16px;
     padding: 38px 10px;
     border: 1px solid var(--color-grey-4);
+    animation: introAnimation 0.5s linear;
 }
 
 .info__container {
