@@ -5,7 +5,10 @@ import "./style.css";
 
 export function List({ listTransactions, setListTransactions }) {
     const [filterItem, setFilterItem] = useState("");
-    const [buttonStyle1, setButtonStyle1] = useState("");
+    const [buttonStyle1, setButtonStyle1] = useState([
+        "var(--color-primary-1)",
+        "#fff",
+    ]);
     const [buttonStyle2, setButtonStyle2] = useState("");
     const [buttonStyle3, setButtonStyle3] = useState("");
 
