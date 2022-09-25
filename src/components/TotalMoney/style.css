@@ -1,0 +1,30 @@
+.amount__container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: 1px solid var(--color-grey-4);
+    border-radius: 4px;
+    padding: 20px 24px 18px;
+    animation: introAnimation 0.5s linear;
+}
+
+.amount__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amount__info > h3 {
+    color: var(--color-grey-1);
+    font-weight: 700;
+}
+
+.amount__info > span {
+    color: var(--color-primary-1);
+    font-weight: 700;
+}
+
+.amount__container > p {
+    color: var(--color-grey-2);
+    font-size: 13px;
+}
